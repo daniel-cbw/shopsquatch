@@ -1,13 +1,6 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <router-link
-        class="navbar-brand"
-        :to="{ name: 'home.index' }"
-      >
-        Vue 2 Boilerplate
-      </router-link>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -21,26 +14,7 @@
         :class="{ show : menuCollapsed}"
       >
         <ul class="navbar-nav mr-auto">
-          <router-link
-            :to="{ name: 'home.index' }"
-            active-class="active"
-            class="nav-item"
-            tag="li"
-          >
-            <a class="nav-link">
-              Home
-            </a>
-          </router-link>
-          <router-link
-            :to="{ name: 'account.index' }"
-            active-class="active"
-            class="nav-item"
-            tag="li"
-          >
-            <a class="nav-link">
-              Account
-            </a>
-          </router-link>
+          
         </ul>
         <span class="navbar-text">
           <a
@@ -98,13 +72,6 @@
      * The methods that the layout can use.
      */
     methods: {
-      /**
-       * Will log the user out.
-       */
-      logout() {
-        this.$store.dispatch('auth/logout');
-      },
-
       /**
        * Will toggle the menu.
        */

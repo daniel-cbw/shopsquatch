@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <Home></Home>
   </div>
 </template>
 <script>
@@ -11,21 +11,24 @@
    * The entry point of the application
    */
 
+  import Home from '@/pages/Home/Index';
+
   export default {
     /**
      * The name of the application.
      */
-    name: 'vue-boilerplate',
+    name: 'configurator',
+
+    /**
+     * The components that the page can use.
+     */
+    components: {
+      Home,
+    },
 
     /**
      * Fires when the app has been mounted.
      */
-    mounted() {
-      // If the user is authenticated,
-      // fetch the data from the API
-      if (this.$store.state.auth.authenticated) {
-        this.$store.dispatch('account/find');
-      }
-    },
+    mounted() {},
   };
 </script>
